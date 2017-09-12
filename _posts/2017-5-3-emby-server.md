@@ -11,7 +11,7 @@ title: آموزش راه اندازی مدیا سرور Emby
 
 پس از نصب با استفاده از دستورات زیر سرور را اجرا کرده :
 
-```
+```shell
 $ sudo systemctl start emby-server
 $ sudo systemctl enable emby-server
 ```
