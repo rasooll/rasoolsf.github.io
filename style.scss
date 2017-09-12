@@ -12,6 +12,11 @@
 /**************/
 /* BASE RULES */
 /**************/
+@font-face {
+  font-family: sahel;
+  font-weight: regular;
+  src: url('Sahel.woff') format("woff");
+}
 
 html {
   font-size: 100%;
