@@ -1,15 +1,18 @@
 ---
 layout: page
-title: About
+title: درباره‌ی من
 permalink: /about/
 ---
+رسول صفری هستم متولد اولین روز تیر ماه سال ۱۳۷۵ در تهران به الکترونیک علاقه‌ی زیادی دارم و از طراحی وب سایت هم لذت می‌برم.
+دانشجوی مهندسی برق هستم در دانشگاه آزاد شهرری (یادگار امام)
+اصولا به آزادی اهمیت زیادی میدم و سیستم عامل محبوب من هم گنو/لینوکس هست ، به این دلیل که در این سیستم عامل محدود به هیچ چیز نیستم و تمامی خواسته هایم قابل اجراست.
 
-Some information about you!
+### برخی مهارت‌ها:
+* HTML / CSS
+* Bootstrap
+* Wordpress
+* Joomla
+* Python
+* LIPIC1
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+راه های ارتباطی زیادی با من وجود داره که در فوتر سایت مشخص هست :)
