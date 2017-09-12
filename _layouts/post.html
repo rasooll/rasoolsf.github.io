@@ -10,7 +10,7 @@ layout: default
   </div>
 
   <div class="date">
-    Written on {{ page.date | jdate: "%A %d %b %Y" | habify" }}
+    Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
   <hr />
   {% include disqus.html %}
