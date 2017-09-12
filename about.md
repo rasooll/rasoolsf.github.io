@@ -15,6 +15,6 @@ permalink: /about/
 - Wordpress
 - Joomla
 - Python
-- LIPIC1
+- LPIC-1
 
 راه های ارتباطی زیادی با من وجود داره که در فوتر سایت مشخص هست :)
