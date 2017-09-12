@@ -7,16 +7,18 @@ title: آموزش راه اندازی مدیا سرور Emby
 
 برای نصب Emby Server در توزیع های گنو لینوکس:
 
-```https://software.opensuse.org/download.html?project=home%3Aemby&package=emby-server```
+`https://software.opensuse.org/download.html?project=home%3Aemby&package=emby-server`
 
 پس از نصب با استفاده از دستورات زیر سرور را اجرا کرده :
 
-```$ sudo systemctl start emby-server
-$ sudo systemctl enable emby-server```
+```
+$ sudo systemctl start emby-server
+$ sudo systemctl enable emby-server
+```
 
  حال که Emby Server اجرا شد از طریق لینک زیر می توان به آن دسترسی داشت:
 
-```http://localhost:8090```
+`http://localhost:8090`
 
  وقتی برای اولین بار وارد تنظیمات سرور شدید یک ویزارد برای شما باز شده و تنظیمات آنرا انجام میدهید (تنظیمات سختی نداشت اما زمان انجام یادم رفت عکس بگیرم 😐  ).
 
