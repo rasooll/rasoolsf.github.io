@@ -1,23 +1,20 @@
 ---
 layout: default
-title: آرشیو ماهانه
+title: آرشیو
 permalink: /archive/
 ---
-<div class="post">
-	<h2>آرشیو ماهانه</h2>
-	<ul>
-	  {% for post in site.posts %}
-	    {% unless post.next %}
-	      <h3>{{ post.date | date: '%Y %b' }}</h3>
-	    {% else %}
-	      {% capture year %}{{ post.date | date: '%Y %b' }}{% endcapture %}
-	      {% capture nyear %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
-	      {% if year != nyear %}
-	        <h3>{{ post.date | date: '%Y %b' }}</h3>
-	      {% endif %}
-	    {% endunless %}
+<section class="archive-post">
 
-	    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
-</div>
+   {% for post in site.posts %}
+       {% assign currentDate = post.date | jdate: "%Y" %}
+       {% if currentDate != myDate %}
+           {% unless forloop.first %}</ul>{% endunless %}
+           <h1>{{ currentDate }}</h1>
+           <div>
+           {% assign myDate = currentDate %}
+       {% endif %}
+       <p><span class="date" style="margin-left: 8px;">{{ post.date | jdate: "%d / %m" }}</span><a href="{{ post.url }}">{{ post.title }}</a></p>
+       {% if forloop.last %}</div>{% endif %}
+   {% endfor %}
+
+</section>
