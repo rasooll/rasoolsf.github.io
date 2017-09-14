@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>آموزش راه اندازی مدیا سرور Emby – رسول صفری – وبلاگی برای انتشار حرف هایم!</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+چند وقتی بود که دوست داشتم فیلم هایی که داخل کامپیوتر خودم دارم رو بتونم بدون استفاده از فلش مموری داخل پخش کننده خانگی ببینم … این پخش کننده ما امکاناتی مثل FTP یا Kodi نداشت اما وای فای داشت که DLNA هم پشتیبانی میکرد برای همین به فکر افتادم تا فیلم هایم را با استفاده از DLNA روی شبکه به اشتراک بزارم و برای اینکار برنامه ی Emby رو پیدا کردم …
+
+" />
+    <meta property="og:description" content="
+چند وقتی بود که دوست داشتم فیلم هایی که داخل کامپیوتر خودم دارم رو بتونم بدون استفاده از فلش مموری داخل پخش کننده خانگی ببینم … این پخش کننده ما امکاناتی مثل FTP یا Kodi نداشت اما وای فای داشت که DLNA هم پشتیبانی میکرد برای همین به فکر افتادم تا فیلم هایم را با استفاده از DLNA روی شبکه به اشتراک بزارم و برای اینکار برنامه ی Emby رو پیدا کردم …
+
+" />
+    
+    <meta name="author" content="رسول صفری" />
+
+    
+    <meta property="og:title" content="آموزش راه اندازی مدیا سرور Emby" />
+    <meta property="twitter:title" content="آموزش راه اندازی مدیا سرور Emby" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="رسول صفری - وبلاگی برای انتشار حرف هایم!" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+  
+          <a href="/" class="site-avatar"><img src="https://secure.gravatar.com/avatar/789598edd4440e0a5e0d8e37f4ae5de7?s=140&d=mm&r=g" /></a>
+            
+            <div class="site-info">
+              <h1 class="site-name"><a href="/">رسول صفری</a></h1>
+              <p class="site-description">وبلاگی برای انتشار حرف هایم!</p>
+            </div>
+
+            <nav>
+              <a href="/archive">آرشیو</a>
+              <a href="/about">درباره‌ی من</a>
+            </nav>
+
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>آموزش راه اندازی مدیا سرور Emby</h1>
+
+  <div class="entry">
+    <p><img src="/images/post/emby-server.png" alt="تصویری از مدیا سرور" title="Emby Server" />
+چند وقتی بود که دوست داشتم فیلم هایی که داخل کامپیوتر خودم دارم رو بتونم بدون استفاده از فلش مموری داخل پخش کننده خانگی ببینم … این پخش کننده ما امکاناتی مثل FTP یا Kodi نداشت اما وای فای داشت که DLNA هم پشتیبانی میکرد برای همین به فکر افتادم تا فیلم هایم را با استفاده از DLNA روی شبکه به اشتراک بزارم و برای اینکار برنامه ی Emby رو پیدا کردم …</p>
+
+<p>برای نصب Emby Server در توزیع های گنو لینوکس:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>https://software.opensuse.org/download.html?project=home%3Aemby&amp;package=emby-server
+</code></pre>
+</div>
+
+<p>پس از نصب با استفاده از دستورات زیر سرور را اجرا کرده :</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo systemctl start emby-server
+<span class="gp">$ </span>sudo systemctl <span class="nb">enable </span>emby-server
+</code></pre>
+</div>
+
+<p>حال که Emby Server اجرا شد از طریق لینک زیر می توان به آن دسترسی داشت:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>http://localhost:8090
+</code></pre>
+</div>
+
+<p>وقتی برای اولین بار وارد تنظیمات سرور شدید یک ویزارد برای شما باز شده و تنظیمات آنرا انجام میدهید (تنظیمات سختی نداشت اما زمان انجام یادم رفت عکس بگیرم 😐  ).</p>
+
+<p>اما کل کاری که باید انجام بدید به این صورت هست که فولدری که ویدئو های شما در اون قرار داره باید به سرور معرفی بشه.</p>
+
+<p>حالا وقتی دستگاه پخش کننده شما به وای فای وصل باشه و وارد برنامه ی  DLNA DMP شوید فولدری که به اشتراک گذاشته اید را مشاهده کرده و میتوانید تمامی ویدئو هایتان را به راحتی مشاهده کنید. 😉</p>
+
+  </div>
+
+  <div class="date">
+    نوشته شده در چهارشنبه 13 اردیبهشت 1396
+  </div>
+  <hr />
+  
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'https-rasooll-com';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:safari@rasooll.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/rasoolsf"><i class="svg-icon github"></i></a>
+<a href="https://instagram.com/rasool.sf"><i class="svg-icon instagram"></i></a>
+<a href="https://www.linkedin.com/in/rasoolsf"><i class="svg-icon linkedin"></i></a>
+
+
+<a href="https://www.twitter.com/rasool_sf"><i class="svg-icon twitter"></i></a>
+
+
+
+          <p>
+            مطالب تحت لیسانس <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.fa" target="_blank">کریتیو کامنز</a> منتشر می‌شوند. 
+          </p>
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
