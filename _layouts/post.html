@@ -10,7 +10,7 @@ layout: default
   </div>
 
   <div class="date">
-    نوشته شده در {{ page.date | date: "%Y/%m/%e" }}
+    نوشته شده در {{ page.date | jdate: "%A %d %b %Y" }}
   </div>
   <hr />
   {% include disqus.html %}
